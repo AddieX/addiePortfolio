@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>Addie Arjmnd | Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-nav">
+        <div class="header-text">
+          <div class="header-top">
+            <h1>Addie.</h1>
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+          <div class="social-links">
+            <a href="https://www.github.com/AddieX" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="about-me">
+          <p>
+            Web-Developer <br />
+            HTML | CSS | JavaScript (Electron/Typescript) <br />
+            <br />
+            Born: 2003 &nbsp; |&nbsp; Started-Development: 2017 <br />
+            Worked: Technical-Support in
+            <a class="worked-link" href="https://en.wikipedia.org/wiki/Goose">Example.</a>
+            <br />
+            <br />
+            Passionate about creating innovative web solutions and learning new technologies.
+          </p>
+        </div>
+      </div>
+
+      <div class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://dummyimage.com/800x400/1a1a1a/00ff88.png&text=Task+Manager" alt="Junior Developer Task Manager Interface" onerror="this.src='https://via.placeholder.com/800x400/1a1a1a/00ff88?text=Task+Manager'" />
+            </div>
+            <h3>Junior Developer Task Manager</h3>
+            <p>A specialized task management application designed for junior developers to organize their learning journey, coding practice, and development tasks. Features include task categorization, priority levels, progress tracking, and local storage.</p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="https://github.com/AddieX/juniordevTaskmanger" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://dummyimage.com/800x400/1a1a1a/00ff88.png&text=Portfolio" alt="Minimalist Portfolio Design" onerror="this.src='https://via.placeholder.com/800x400/1a1a1a/00ff88?text=Portfolio'" />
+            </div>
+            <h3>Minimalist Portfolio</h3>
+            <p>A clean, responsive, and elegant portfolio website with a minimalist design aesthetic. Features include dark mode support, subtle animations, and accessibility considerations. Built with modern web standards and optimized for performance.</p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Google Fonts</span>
+              <span>Font Awesome</span>
+            </div>
+            <a href="https://github.com/AddieX/minimalistPortfolio" target="_blank" class="project-link">View Project</a>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://dummyimage.com/800x400/1a1a1a/00ff88.png&text=Create+Account" alt="Modern Create Account Portal Interface" onerror="this.src='https://via.placeholder.com/800x400/1a1a1a/00ff88?text=Create+Account'" />
+            </div>
+            <h3>Modern Create Account Portal</h3>
+            <p>A modern, responsive account creation form with comprehensive multilingual support for 10 languages including RTL scripts. Features include form validation, language preference persistence, and WCAG 2.1 AA accessibility compliance.</p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Flag Icons</span>
+            </div>
+            <a href="https://github.com/AddieX/modern-createAccount" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
