@@ -89,7 +89,7 @@ To customize this portfolio for your own use:
    - Add/remove projects in the projects grid
    - Update social media links
    - Modify form handling in JavaScript
-
+ 
 ## Browser Support
 
 Tested and optimized for:
