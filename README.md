@@ -1,28 +1,51 @@
 # Addie's Portfolio Website
 
-A modern, minimalist portfolio website showcasing my web development projects and skills. The website features a clean design, dark mode support, and a responsive layout optimized for all devices.
+A modern, minimalist portfolio website showcasing my web development projects and skills. The website features a clean design aesthetic with dark mode support, responsive layout.
 
 ## Features
 
-- **Clean, Minimalist Design**: Modern and professional aesthetic with intuitive navigation
-- **Dark Mode**: Toggle between light and dark themes for comfortable viewing in any environment
-- **Responsive Layout**: Fully optimized for desktop, tablet, and mobile devices
-- **Project Showcase**: Featured projects with detailed descriptions and tech stacks
-- **Contact Form**: Easy-to-use contact form with validation for professional inquiries
-- **Social Links**: Direct links to professional profiles and networks
-- **Accessibility**: Built with WCAG guidelines in mind for inclusive user experience
-- **Performance Optimized**: Fast loading times and optimized assets
-- **SEO Friendly**: Structured content and meta tags for better search engine visibility
+- **Clean, Minimalist Design**: Modern and professional layout that puts the focus on content
+- **Dark Mode Support**: Toggle between light and dark themes for comfortable viewing
+- **Responsive Layout**: Fully responsive design that works seamlessly across all devices
+- **Project Showcase**: Featured projects section with detailed descriptions and tech stacks
+- **Contact Form**: Interactive contact form for easy communication
+- **Social Links**: Direct links to professional profiles (GitHub)
+- **Accessibility**: Built with WCAG guidelines in mind for better accessibility
 
-## Technologies Used
+## Tech Stack
 
 - HTML5
-- CSS3 (with modern features like Grid and Flexbox)
-- JavaScript (ES6+)
+- CSS3
+- JavaScript
 - Font Awesome Icons
 - Google Fonts
-- Responsive Images
-- CSS Custom Properties for theming
+
+## Projects Featured
+
+1. **Junior Developer Task Manager**
+   - Task management application for junior developers
+   - Features task categorization, priority levels, and progress tracking
+   - Built with HTML5, CSS3, and JavaScript
+
+2. **Minimalist Portfolio**
+   - Clean and responsive portfolio website
+   - Features dark mode and subtle animations
+   - Built with modern web standards
+
+3. **Modern Create Account Portal**
+   - Multilingual account creation form
+   - Supports 10 languages including RTL scripts
+   - WCAG 2.1 AA compliant
+
+## Getting Started
+
+1. Clone the repository
+2. Open `index.html` in your preferred browser
+3. No build process required - simple and straightforward
+
+## Contact
+
+Feel free to reach out through the contact form on the website or connect with me on [GitHub](https://github.com/AddieX).
 
 ## Project Structure
 
@@ -35,41 +58,6 @@ A modern, minimalist portfolio website showcasing my web development projects an
 ├── index.html        # Main HTML file
 └── README.md         # Project documentation
 ```
-
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AddieX/portfolio-website.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio-website
-   ```
-
-3. Open `index.html` in your preferred web browser or set up a local development server.
-
-## Features Breakdown
-
-### Header Section
-- Professional branding and navigation
-- Smooth theme toggle (dark/light mode)
-- Integrated social media links
-- Engaging introduction and skills overview
-
-### Projects Section
-- Featured projects with high-quality images
-- Detailed project descriptions and outcomes
-- Technology stack tags for each project
-- Direct links to live demos and GitHub repositories
-- Hover effects and smooth transitions
-
-### Contact Section
-- Professional contact form with validation
-- Required fields: Name, email, and message
-- Success/error feedback for better UX
-- Protection against spam submissions
 
 ## Customization
 
