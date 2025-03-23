@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --bg-gradient-dark: linear-gradient(135deg, #000000, #121212);
+  --bg-gradient-dark: linear-gradient(135deg, #000000, #1a1a2e);
   --bg-primary-dark: rgba(0, 0, 0, 0.95);
   --bg-secondary-dark: rgba(255, 255, 255, 0.05);
   --border-color-dark: rgba(255, 255, 255, 0.1);
@@ -10,7 +10,7 @@
   --text-secondary-dark: rgba(255, 255, 255, 0.7);
   --accent-color-dark: #ffffff;
   --accent-color-hover-dark: rgba(255, 255, 255, 0.8);
-  --bg-gradient-light: linear-gradient(135deg, #ffffff, #f5f5f5);
+  --bg-gradient-light: linear-gradient(135deg, #ffffff, #f0f2f5);
   --bg-primary-light: rgba(255, 255, 255, 0.95);
   --bg-secondary-light: rgba(0, 0, 0, 0.05);
   --border-color-light: rgba(0, 0, 0, 0.1);
@@ -26,6 +26,10 @@
   --text-secondary: var(--text-secondary-dark);
   --accent-color: var(--accent-color-dark);
   --accent-color-hover: var(--accent-color-hover-dark);
+  --transition-speed: 0.3s;
+  --bounce-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --glow-dark: 0 0 20px rgba(255, 255, 255, 0.1);
+  --glow-light: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme {
@@ -81,7 +85,11 @@ body.light-theme .worked-link:hover {
 }
 
 body.light-theme .header-text h1 {
-  background: linear-gradient(45deg, var(--accent-color-light), var(--accent-color-hover-light));
+  background: linear-gradient(
+    45deg,
+    var(--accent-color-light),
+    var(--accent-color-hover-light)
+  );
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -113,6 +121,10 @@ body {
   margin: 2rem;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  animation: scaleIn 0.5s var(--bounce-timing);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--glow-dark);
 }
 
 .header-top {
@@ -134,12 +146,12 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  animation: scaleIn 0.5s var(--bounce-timing);
 }
 
 .theme-toggle:hover {
-  transform: scale(1.1);
-  background: var(--accent-color);
-  color: var(--bg-primary);
+  transform: scale(1.15) rotate(180deg);
+  box-shadow: 0 0 15px var(--accent-color);
 }
 
 .header-text {
@@ -148,16 +160,25 @@ body {
   padding: 1.5rem;
   border-radius: 12px;
   background: var(--bg-secondary);
+  animation: fadeInUp 0.8s var(--bounce-timing);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-text h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  background: linear-gradient(45deg, var(--accent-color), var(--accent-color-hover));
+  background: linear-gradient(
+    45deg,
+    var(--accent-color),
+    var(--accent-color-hover)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.6s var(--bounce-timing);
+  letter-spacing: 1px;
 }
 
 .social-links {
@@ -177,15 +198,18 @@ body {
   color: var(--text-primary);
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  animation: scaleIn 0.5s var(--bounce-timing);
+  transition: all 0.3s var(--bounce-timing);
 }
 
 .social-btn:hover {
-  background: var(--accent-color);
-  color: var(--bg-primary);
+  transform: scale(1.15) rotate(5deg);
+  animation: borderGlow 1.5s infinite;
 }
 
 .about-me p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
   margin-left: 1.23rem;
   line-height: 1.8;
   color: var(--text-secondary);
@@ -224,6 +248,9 @@ body {
   transition: transform 0.3s ease;
   overflow: hidden;
   border: 1px solid var(--border-color);
+  animation: fadeInUp 0.6s var(--bounce-timing);
+  animation-fill-mode: both;
+  transition: all 0.4s var(--bounce-timing);
 }
 
 .project-image {
@@ -237,6 +264,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s var(--bounce-timing);
 }
 
 .project-image::before {
@@ -257,18 +285,19 @@ body {
   background: rgba(26, 26, 26, 0.9);
 }
 
-.project-image img:not([src]), 
+.project-image img:not([src]),
 .project-image img[src=""],
 .project-image img[src*="undefined"] {
   opacity: 0;
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.05);
+.project-image:hover img {
+  transform: scale(1.08);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
@@ -290,6 +319,12 @@ body {
   border-radius: 15px;
   font-size: 0.9rem;
   border: 1px solid var(--border-color);
+  transition: all 0.3s var(--bounce-timing);
+}
+
+.tech-stack span:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-link {
@@ -323,11 +358,15 @@ body {
   border-radius: 8px;
   color: var(--text-primary);
   font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn {
@@ -339,26 +378,37 @@ body {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s var(--bounce-timing);
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-btn:hover {
-  background: var(--accent-color-hover);
-  transform: translateY(-2px);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
   .container {
     width: 95%;
     padding: 1rem;
+    margin: 1rem;
   }
 
   .header-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    transform: none !important;
   }
 }
 
@@ -368,4 +418,42 @@ body {
 .form-group input,
 .form-group textarea {
   transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 5px var(--accent-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-color);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--accent-color);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
